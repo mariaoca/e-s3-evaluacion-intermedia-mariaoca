@@ -14,7 +14,15 @@ class PokeList extends Component{
                             <li className="ItemList" key={index}>
                                 <img src={item.url} />
                                 <h2>{item.name}</h2>
-                                
+                                <ul>
+                                    {item.types.map((type,index)=>{
+                                        return (
+                                            <li className="typeList" key={index}>
+                                                {type}
+                                            </li>
+                                        )
+                                    })}
+                                </ul>
                             </li>
                         );
                     })}
